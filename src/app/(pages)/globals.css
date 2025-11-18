@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+/* 기본 light 테마 변수 */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #f2f2f2;
+  --white-gray: #7d7d7d;
+  --white-lightgray: #f3f3f3;
+  --white-lightgray-text: #d0d0d0;
+  --blue: #007bff;
+}
+
+/* dark 테마를 class로 적용 */
+html.dark {
+  --white: #000000;
+  --black: #ffffff;
+  --gray: #383838;
+  --white-gray: #ffffff;
+  --white-lightgray: #ffffff;
+  --white-lightgray-text: #ffffff;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: background-color 1.5s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  /* * {
+    --white: #000000;
+    --black: #ffffff;
+    --gray: #383838;
+    --white-gray: #ffffff;
+    --white-lightgray: #ffffff;
+    --white-lightgray-text: #ffffff;
+  } */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
