@@ -1,0 +1,5 @@
+{
+  "title": "재귀함수와 팩토리얼 함수의 실행시간 차이",
+  "date": "2025-11-18T01:30:23.737Z",
+  "content": "## 1. 재귀함수\n\n- 자기 자신을 호출하여 순환하여 수행되는 것\n- 재귀함수의 대표적인 예로는 팩토리얼 함수가 있다.\n\n## 2. 팩토리얼 함수\n\n- 1부터 n까지 모든 자연수를 곱하는 연산\n- n! = n x (n-1)!\n\n### 2-1. 재귀함수를 이용한 팩토리얼 함수\n\n재귀함수를 이용한 팩토리얼 함수는 아래와 같다.\n\n```javascript\nfunction solution(n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * solution(n - 1);\n}\n```\n\n### 2-2. 반복문을 이용한 팩토리얼 함수\n\n재귀함수를 이용하지 않고 반복문 만으로도 팩토리얼 함수 작성이 가능하다.\n\n```javascript\nfunction solution(n) {\n    var result = 1;\n    for (let i = 1; i <= n; i++) {\n        result *= i;\n    }\n    return result;\n}\n```\n\n### 2-3. 재귀함수와 반복문의 실행시간 차이\n- 재귀함수와 반복문으로 팩토리얼 함수를 작성했을 때 실행시간 차이가 발생한다.\n\n![image](https://velog.velcdn.com/images/dldnjssh123/post/6c2b5b6a-b7f2-4632-ba16-ef51c8ecdf84/image.png)\n\n- 위의 이미지에서 알 수 있듯 재귀함수로 실행했을 때 실행시간이 훨씬 크다는 걸 알 수 있다.\n- 반복문으로 해결할 수 있는 코드는 재귀함수를 쓰지 않고 해결하는 게 코드 실행시간을 줄일 수 있을 것 같다."
+}
